@@ -1,0 +1,52 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@900&family=Press+Start+2P&display=swap");
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+}
+h2 {
+  text-align: center;
+  font-size: 24px;
+  line-height: 200%;
+}
+.container {
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+}
+.top-image {
+  background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjA0NzdiODlmMDBmNDUzOTkzZmQ0MjYzZjU1NDQ5MDFjZDkwY2QwZSZjdD1z/K7o9FdCoDnwEo/giphy.gif");
+  background-repeat: repeat-x;
+  height: 229px;
+  max-width: 100%;
+  margin-bottom: 10%;
+}
+.piggy {
+  width: 250px;
+  transform: scaleX(-1);
+}
+
+.animation-container {
+  position: relative;
+  z-index: -1;
+}
+.animate-horizon {
+  width: 250px;
+  animation: horizontalLine 2s infinite ease-out;
+}
+
+.animate-vert {
+  animation: verticalLine 2s infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+@keyframes verticalLine {
+  50% {
+    transform: translate3D(0, -100px, 0);
+  }
+}
+
+@keyframes horizontalLine {
+  50% {
+    transform: translate3D(100px, 0, 0);
+  }
+}
